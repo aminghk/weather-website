@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+      <title>Hava Durmunu</title>
+      <link rel="icon" href="/img/weather.png">
+      <link rel="stylesheet" href="/css/styles.css">
+      
+</head>
+
+<body>
+      <div class="main-content">
+            {{>header}}
+            <p>Bu sitede , istediğiniz şehri arayarak hava durmunu öğrenin !</p>
+
+            <form>
+                  <input type="text" placeholder="Lokasyon">
+                  <button>Ara</button>
+            </form>
+
+            <p id="location" class="location"></p>
+            <p id="forecast"></p>
+            
+      </div>
+     
+      {{>footer}}
+
+      <script src="/js/app.js"></script>
+</body>
+
+
+</html>
