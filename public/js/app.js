@@ -4,7 +4,6 @@ const forecastMsg = document.querySelector('#forecast')
 const locationMsg = document.querySelector('#location')
 
 
-
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()
 
