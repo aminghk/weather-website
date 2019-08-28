@@ -1,6 +1,10 @@
 const request = require('request');
 
 
+
+
+
+
 const forecast = (latitude,longitude,callback) => {
 const url = 'https://api.darksky.net/forecast/'
 +'ac1133cb6c0a8f37cc0c93db6635fb26/'+encodeURIComponent(latitude) +
@@ -14,7 +18,9 @@ callback('lokasıyon bulunmadı .' , undefined)
 callback(undefined ,  body.daily.data[0].summary +   
     'Şuanda ' + body.currently.temperature 
    +' derece ve  ' + body.currently.precipProbability +
-   '% yağmur yağma ihtimalı var.')
+   '% yağmur yağma ihtimalı var.'
+   +'Bügünün en yüksek sıcaklığı :'+ body.daily.data[0].temperatureHigh+
+   ' ve en düşük sıcaklığı : '+ body.daily.data[0].temperatureLow)
 }
 })
 }
